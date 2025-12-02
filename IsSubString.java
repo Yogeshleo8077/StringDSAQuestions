@@ -1,4 +1,15 @@
 public class IsSubString {
+
+    public static boolean isSubStringBuiltIn(String str, String sub) {
+        if (str == null || sub == null) {
+            return false;
+
+        }
+
+        return str.contains(sub);
+    }
+
+    // without built-in method
     public static boolean isSubString(String str, String sub) {
         if (str == null || sub == null) {
             return false;
@@ -24,6 +35,7 @@ public class IsSubString {
         String str = "hello world";
         String sub = "world";
 
-        System.out.println(isSubString(str, sub));
+        // System.out.println(isSubString(str, sub));
+        System.out.println(isSubStringBuiltIn(str, sub));
     }
 }
